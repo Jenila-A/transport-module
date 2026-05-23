@@ -1,0 +1,222 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #1a73e8, #0d47a1);
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links button {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.5);
+  padding: 9px 22px;
+  margin-left: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.nav-links button:hover,
+.nav-links button.active {
+  background: white;
+  color: #1a73e8;
+  border-color: white;
+  transform: translateY(-1px);
+}
+
+.content { padding: 30px 40px; }
+
+.page-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a73e8;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  border: 1px solid #eef0f4;
+}
+
+.card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f2f5;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+input, select {
+  padding: 11px 14px;
+  border: 2px solid #e0e4ed;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  transition: border 0.3s;
+  outline: none;
+  color: #333;
+}
+
+input:focus, select:focus {
+  border-color: #1a73e8;
+}
+
+input::placeholder { color: #aaa; }
+
+.btn {
+  padding: 11px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1a73e8, #0d47a1);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26,115,232,0.4);
+}
+
+.btn-danger {
+  background: #fff0f0;
+  color: #e53935;
+  border: 1px solid #ffcdd2;
+}
+
+.btn-danger:hover {
+  background: #e53935;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th {
+  padding: 13px 16px;
+  text-align: left;
+  background: #f8f9fb;
+  color: #666;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 14px;
+  color: #444;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafbff; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  border: 1px solid #eef0f4;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover { transform: translateY(-4px); }
+
+.stat-icon { font-size: 32px; margin-bottom: 10px; }
+
+.stat-card h3 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1a73e8;
+  line-height: 1;
+}
+
+.stat-card p {
+  color: #888;
+  font-size: 13px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.badge.available { background: #e8f5e9; color: #2e7d32; }
+.badge.on-trip { background: #fff3e0; color: #e65100; }
+.badge.maintenance { background: #fce4ec; color: #c62828; }
+.badge.pending { background: #fff8e1; color: #f57f17; }
+.badge.transit { background: #e3f2fd; color: #1565c0; }
+.badge.delivered { background: #e8f5e9; color: #2e7d32; }
+.badge.cancelled { background: #fce4ec; color: #c62828; }
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #aaa;
+  font-size: 15px;
+}
+
+select.status-select {
+  padding: 7px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: auto;
+  margin-right: 8px;
+}
